@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to IPL's World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           background-image: url('https://wallpapercave.com/wp/wp7104495.jpg');
+            background-size: cover;/
+            height: 2000px; /* This will make the page long */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+        h2 {
+            text-align: center;
+            color: #39FF14; /* Neon green color */
+        }
+        p {
+            text-align: left;
+            color: yellow;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: red;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to IPL's World!</h1>
+        <h2>You are a talented individual</h2>
+        <p>With regards from KUNAL</p>
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age">
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" name="gender">
+            <label for="team">Your favourite IPL team:</label>
+            <input type="text" id="team" name="team">
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var team = document.getElementById('team').value;
+            window.location.href = 'https://www.iplt20.com/teams/' + team.toLowerCase().split(' ').join('-');
+        });
+    </script>
+</body>
+</html>
